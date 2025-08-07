@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Confirmation</h1>
+    <p><strong>Name:</strong> {{ entry.name }}</p>
+    <p><strong>Age:</strong> {{ entry.age or "N/A" }}</p>
+    <p><strong>Title:</strong> {{ entry.title }}</p>
+    <p><strong>Hometown:</strong> {{ entry.hometown or "N/A" }}</p>
+
+    <h2>Previous Entries</h2>
+    <table>
+        <tr><th>Name</th><th>Age</th><th>Title</th><th>Hometown</th></tr>
+        {% for e in entries %}
+        <tr>
+            <td>{{ e.name }}</td>
+            <td>{{ e.age or "N/A" }}</td>
+            <td>{{ e.title }}</td>
+            <td>{{ e.hometown or "N/A" }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>
