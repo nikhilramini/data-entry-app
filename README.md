@@ -17,8 +17,8 @@ cd data-entry-app
 pip install -r requirements.txt
 
 # Run the Flask application:
-export FLASK_APP=app.py           # On Windows use `set FLASK_APP=app.py`
-export FLASK_ENV=development      # On Windows use `set FLASK_ENV=development`
+export FLASK_APP=app.py           # On Windows use set FLASK_APP=app.py
+export FLASK_ENV=development      # On Windows use set FLASK_ENV=development
 flask run
 
 Open your browser and navigate to the URL displayed in the terminal after running flask run
